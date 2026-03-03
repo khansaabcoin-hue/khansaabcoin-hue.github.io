@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>KHAN SAAB Coin - Community Pre-Launch</title>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+<link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500&family=Roboto:wght@400;500&display=swap" rel="stylesheet">
+
+<style>
+body {margin:0;font-family:'Roboto',sans-serif;background:#0a0f1f;color:#fff;scroll-behavior:smooth;}
+a{text-decoration:none;color:inherit;}
+header{display:flex;justify-content:space-between;align-items:center;padding:15px 30px;background:#111827;position:sticky;top:0;z-index:1000;box-shadow:0 0 15px rgba(0,0,0,0.5);}
+header .logo-header{display:flex;align-items:center;gap:8px;}
+header .logo-header img{width:50px;height:50px;}
+header h1{font-family:'Orbitron',sans-serif;font-size:22px;color:#22c55e;margin:0;white-space:nowrap;}
+.menu-btn{font-size:26px;cursor:pointer;display:none;}
+nav a{margin:0 15px;font-weight:bold;position:relative;transition:0.3s;}
+nav a::after{content:'';position:absolute;bottom:-4px;left:0;width:0;height:2px;background:#22c55e;transition:0.3s;}
+nav a:hover::after{width:100%;}
+@media(max-width:768px){
+.menu-btn{display:block;}
+nav{display:none;position:absolute;top:70px;right:30px;background:#111827;flex-direction:column;border-radius:8px;overflow:hidden;}
+nav a{padding:12px;}
+}
+
+/* Hero */
+.hero{position:relative;text-align:center;padding:120px 20px;background:linear-gradient(135deg,#111827,#0a0f1f);overflow:hidden;}
+.hero img{width:240px;margin-bottom:15px;animation:float 3s infinite ease-in-out;}
+.hero h2{font-family:'Orbitron',sans-serif;font-size:32px;color:#22c55e;margin:5px 0;white-space:nowrap;}
+.hero .tagline{font-size:18px;color:#9ca3af;margin:8px 0;animation:flash 1.5s infinite;}
+.hero p{font-size:18px;color:#9ca3af;margin:6px;}
+.hero .highlight{color:#22c55e;font-weight:bold;text-decoration:underline;animation:flash 1.5s infinite;}
+.hero .buttons{margin-top:25px;}
+.btn{padding:14px 30px;margin:10px;border-radius:12px;border:none;font-weight:bold;cursor:pointer;transition:0.4s;}
+.btn-green{background:#22c55e;color:#000;box-shadow:0 0 15px #22c55e;}
+.btn-green:hover{transform:scale(1.05);box-shadow:0 0 25px #22c55e;}
+.btn-dark{background:#111827;color:#a855f7;box-shadow:0 0 15px #a855f7;}
+.btn-dark:hover{transform:scale(1.05);box-shadow:0 0 25px #a855f7;}
+
+@keyframes float{0%,100%{transform:translateY(0);}50%{transform:translateY(-15px);}}
+@keyframes flash{0%,100%{opacity:1;}50%{opacity:0.3;}}
+
+.section{padding:60px 20px;max-width:1000px;margin:auto;text-align:center;}
+.section h2{color:#22c55e;margin-bottom:15px;font-size:28px;}
+.section p{color:#9ca3af;margin:8px 0;font-size:16px;line-height:1.6;}
+
+/* Phase Timeline */
+.phase-timeline{width:80%;margin:30px auto;}
+.phase-step{
+background:#22c55e;
+color:#000;
+padding:10px 15px;
+border-radius:12px;
+margin:10px 0;
+cursor:pointer;
+box-shadow:0 0 15px #22c55e;
+transition:0.3s;
+}
+.phase-step:hover{
+transform:scale(1.03);
+box-shadow:0 0 30px #22c55e;
+}
+.phase-detail{
+display:none;
+background:#111827;
+padding:15px;
+border-radius:8px;
+margin-top:5px;
+color:#9ca3af;
+}
+
+/* Tokenomics */
+.tokenomics-table{width:100%;border-collapse:collapse;margin-top:20px;}
+.tokenomics-table th,.tokenomics-table td{border:1px solid #1f2937;padding:12px;font-size:16px;}
+.tokenomics-table th{background:#111827;}
+.pie-chart{width:200px;height:200px;margin:20px auto;border-radius:50%;background:conic-gradient(#22c55e 0% 73.3%,#6366f1 73.3% 86.6%,#f59e0b 86.6% 93.2%,#f43f5e 93.2% 100%);transition:0.5s;}
+.pie-chart:hover{transform:scale(1.05);}
+
+/* Lock Strategy */
+.lock-bar{background:#1f2937;border-radius:8px;overflow:hidden;margin:15px auto;width:80%;height:20px;}
+.lock-fill{height:100%;display:inline-block;transition:1s;}
+.hard-lock{width:0%;background:#22c55e;}
+.gradual-lock{width:0%;background:#6366f1;}
+.soft-lock{width:0%;background:#f59e0b;}
+
+/* Roadmap */
+.roadmap{display:flex;flex-wrap:wrap;justify-content:space-around;margin-top:30px;}
+.roadmap div{width:180px;margin:15px;background:#111827;padding:20px;border-radius:8px;transition:0.3s;}
+.roadmap div:hover{transform:scale(1.05);box-shadow:0 0 20px #22c55e;}
+
+.testimonial-card{background:#111827;padding:20px;border-radius:8px;margin:15px auto;max-width:600px;font-style:italic;color:#9ca3af;}
+
+footer{text-align:center;padding:40px 20px;border-top:1px solid #1f2937;color:#6b7280;}
+footer input[type="email"]{padding:12px 18px;border-radius:8px;border:none;width:200px;background:#0a0f1f;color:#22c55e;box-shadow:0 0 10px #22c55e;}
+footer button{padding:12px 20px;margin-left:10px;border-radius:8px;border:none;background:#22c55e;color:#000;box-shadow:0 0 15px #22c55e;}
+footer button:hover{box-shadow:0 0 30px #22c55e;transform:scale(1.05);}
+</style>
+</head>
+
+<body>
+
+<header>
+<div class="logo-header"><img src="coin.png"><h1>KHAN SAAB Coin</h1></div>
+</header>
+
+<section id="hero" class="hero">
+<img src="coin.png">
+<h2>KHAN SAAB Coin</h2>
+<p class="tagline">A Public-First, Transparent Cryptocurrency for Every Pakistani</p>
+<p class="highlight">1 PKR = 1 KHAN Coin</p>
+<p>Total Supply: 750,000,000 KHAN Coin</p>
+<p>Pre-Launch Community Phase</p>
+<div class="buttons">
+<button class="btn btn-green" onclick="window.open('https://t.me/khansaabcoin','_blank')">Join Community</button>
+<button class="btn btn-dark" onclick="window.open('KHAN_SAAB_Coin_Whitepaper.pdf.pdf','_blank')">View Whitepaper</button>
+</div>
+</section>
+
+<section id="phase" class="section">
+<h2>Phase / Pricing Timeline</h2>
+
+<div class="phase-timeline">
+
+<div class="phase-step" onclick="togglePhase('d1')">Pre-Launch</div>
+<div id="d1" class="phase-detail">
+Community building, awareness, fixed 1 PKR price.
+</div>
+
+<div class="phase-step" onclick="togglePhase('d2')">Token Launch</div>
+<div id="d2" class="phase-detail">
+Smart contract deployment and liquidity addition.
+</div>
+
+<div class="phase-step" onclick="togglePhase('d3')">Exchange Listing</div>
+<div id="d3" class="phase-detail">
+Listing on PancakeSwap and public trading activation.
+</div>
+
+</div>
+
+<p>Pricing after Phase 1 will be determined transparently by market demand.</p>
+</section>
+
+<script>
+function togglePhase(id){
+var el=document.getElementById(id);
+el.style.display = el.style.display === "block" ? "none" : "block";
+}
+
+window.addEventListener('scroll',()=>{
+var lockSection=document.getElementById('lock');
+if(lockSection){
+var rect=lockSection.getBoundingClientRect();
+if(rect.top<window.innerHeight-100){
+document.querySelector('.hard-lock').style.width='30%';
+document.querySelector('.gradual-lock').style.width='30%';
+document.querySelector('.soft-lock').style.width='40%';
+}
+}
+});
+</script>
+
+</body>
+  </html>
