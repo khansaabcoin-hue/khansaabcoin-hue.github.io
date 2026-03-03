@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>KHAN SAAB Coin</title>
+
+<style>
+body {
+  margin: 0;
+  font-family: Arial;
+  background: #020617;
+  color: white;
+}
+
+/* HEADER */
+header {
+  display: flex;
+  justify-content: flex-end;
+  padding: 15px;
+}
+
+.menu-btn {
+  font-size: 26px;
+  cursor: pointer;
+}
+
+/* DROPDOWN MENU */
+.dropdown {
+  display: none;
+  position: absolute;
+  top: 60px;
+  right: 15px;
+  background: #111827;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.dropdown a {
+  display: block;
+  padding: 12px 20px;
+  color: white;
+  text-decoration: none;
+}
+
+.dropdown a:hover {
+  background: #22c55e;
+}
+
+/* HERO */
+.hero {
+  text-align: center;
+  padding: 40px 20px;
+}
+
+.hero img {
+  width: 180px;
+  animation: float 3s infinite ease-in-out;
+}
+
+@keyframes float {
+  0% { transform: translateY(0px); }
+  50% { transform: translateY(-12px); }
+  100% { transform: translateY(0px); }
+}
+
+.hero h1 {
+  font-size: 32px;
+  margin: 10px 0;
+}
+
+.hero p {
+  color: #9ca3af;
+}
+
+.highlight {
+  color: #22c55e;
+  font-weight: bold;
+}
+
+/* BUTTONS */
+.buttons {
+  margin-top: 20px;
+}
+
+.btn {
+  padding: 12px 22px;
+  margin: 10px;
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.green {
+  background: #22c55e;
+}
+
+.dark {
+  background: #111827;
+  color: #a855f7;
+}
+
+/* SECTIONS */
+.section {
+  padding: 50px 20px;
+  text-align: center;
+}
+
+.section h2 {
+  margin-bottom: 15px;
+  font-size: 24px;
+}
+
+/* BOX */
+.box {
+  border: 1px solid #22c55e;
+  border-radius: 10px;
+  padding: 20px;
+  max-width: 420px;
+  margin: auto;
+}
+
+/* TOKENOMICS CHART */
+.chart {
+  width: 220px;
+  height: 220px;
+  border-radius: 50%;
+  margin: 30px auto;
+  background: conic-gradient(
+    #22c55e 0% 73%,
+    #16a34a 73% 86%,
+    #15803d 86% 93%,
+    #166534 93% 100%
+  );
+}
+
+/* TRUST */
+.trust p {
+  max-width: 500px;
+  margin: auto;
+  color: #9ca3af;
+}
+
+/* FOOTER */
+footer {
+  background:#020617;
+  padding:50px 20px;
+  border-top:1px solid #1f2937;
+}
+
+.footer-container {
+  max-width:1000px;
+  margin:auto;
+  display:flex;
+  flex-wrap:wrap;
+  justify-content:space-between;
+}
+
+.footer-box {
+  flex:1;
+  min-width:200px;
+  margin-bottom:20px;
+}
+
+.footer-box h3, .footer-box h4 {
+  margin-bottom:10px;
+}
+
+.footer-box p, .footer-box a {
+  color:#9ca3af;
+  font-size:14px;
+  text-decoration:none;
+}
+
+.footer-box a:hover {
+  color:#22c55e;
+}
+
+.footer-bottom {
+  text-align:center;
+  margin-top:30px;
+  color:#6b7280;
+  font-size:13px;
+}
+
+/* GLOW EFFECT */
+.btn:hover {
+  box-shadow: 0 0 15px #22c55e;
+}
+</style>
+</head>
+
+<body>
+
+<header>
+  <div class="menu-btn" onclick="toggleMenu()">☰</div>
+</header>
+
+<div id="menu" class="dropdown">
+  <a href="index.html">Home</a>
+  <a href="about.html">About</a>
+  <a href="roadmap.html">Roadmap</a>
+  <a href="faqs.html">FAQs</a>
+</div>
+
+<!-- HERO -->
+<section class="hero">
+  <h1>KHAN SAAB Coin</h1>
+  <img src="coin.png">
+
+  <p>A Public-First Cryptocurrency</p>
+  <p><span class="highlight">1 Rupee = 1 Coin</span></p>
+
+  <div class="buttons">
+    
+    <!-- Launch Coming Soon -->
+    <button class="btn green">Launch Coming Soon</button>
+
+    <br>
+
+    <!-- Join Community BELOW -->
+    <a href="#">
+      <button class="btn dark">Join Community</button>
+    </a>
+
+  </div>
+</section>
+
+<!-- WHY -->
+<section class="section">
+  <h2>Why This Coin?</h2>
+  <div class="box">
+    <p>✔ Made for common people</p>
+    <p>✔ Low entry (1 rupee concept)</p>
+    <p>✔ Transparent wallets</p>
+    <p>✔ No hidden supply</p>
+  </div>
+</section>
+
+<!-- ABOUT -->
+<section class="section">
+  <h2>About</h2>
+  <p>KHAN SAAB Coin is inspired by the vision of Imran Khan.</p>
+  <p>This project focuses on transparency, trust, and public access.</p>
+  <p>We aim to make crypto simple and fair for everyone.</p>
+</section>
+
+<!-- TOKENOMICS -->
+<section class="section">
+  <h2>Tokenomics</h2>
+
+  <div class="box">
+    <p>Total Supply: 750 Million</p>
+    <p>Public — 73%</p>
+    <p>Liquidity — 13%</p>
+    <p>Marketing — 7%</p>
+    <p>Staking — 7%</p>
+  </div>
+
+  <div class="chart"></div>
+
+  <p>All allocations are transparent and verifiable on blockchain.</p>
+</section>
+
+<!-- ROADMAP -->
+<section class="section">
+  <h2>Roadmap</h2>
+
+  <div class="box">
+    <p><b>Phase 1</b> — Website & Community</p>
+    <p><b>Phase 2</b> — Token Launch</p>
+    <p><b>Phase 3</b> — Marketing</p>
+    <p><b>Phase 4</b> — Exchange Listing</p>
+  </div>
+</section>
+
+<!-- TRUST -->
+<section class="section trust">
+  <h2>Why Trust Us?</h2>
+  <p>
+    Public wallets will be visible. Liquidity will be locked.
+    No fake promises — only transparency and real growth.
+  </p>
+</section>
+
+<!-- FOOTER -->
+<footer>
+
+  <div class="footer-container">
+
+    <div class="footer-box">
+      <h3>KHAN SAAB Coin</h3>
+      <p>Public-first cryptocurrency focused on transparency, trust, and real growth.</p>
+    </div>
+
+    <div class="footer-box">
+      <h4>Quick Links</h4>
+      <p><a href="index.html">Home</a></p>
+      <p><a href="about.html">About</a></p>
+      <p><a href="roadmap.html">Roadmap</a></p>
+      <p><a href="faqs.html">FAQs</a></p>
+    </div>
+
+    <div class="footer-box">
+      <h4>Community</h4>
+      <p><a href="#">Telegram</a></p>
+      <p><a href="#">Twitter (X)</a></p>
+      <p><a href="#">Instagram</a></p>
+      <p><a href="#">Discord</a></p>
+    </div>
+
+  </div>
+
+  <div class="footer-bottom">
+    © 2026 KHAN SAAB Coin — All Rights Reserved
+  </div>
+
+</footer>
+
+<script>
+function toggleMenu() {
+  var menu = document.getElementById("menu");
+  menu.style.display = menu.style.display === "block" ? "none" : "block";
+}
+</script>
+
+</body>
+  </html>
